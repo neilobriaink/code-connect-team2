@@ -32,9 +32,16 @@ class EmployeeService {
 
     // Get a user by ID
     getEmployeeById(id) {
-        const employees = this.getEmployees();
-        return employees.find(employee => employee.id === id);
+    try {
+        const data = fs.readFileSync(this.filePath, 'utf8');
+        const employees = JSON.parse(data);
+
+        return employees.find(employee => employee.id == id) || null;
+    } catch (error) {
+        console.error('Could not find employee: ', error);
+        return null;
     }
+}
 
     // Create a new user
     createEmployee(newEmployee) {
