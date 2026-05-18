@@ -37,4 +37,14 @@ router.post('/add', validateEmployee, (req, res) => {
   res.redirect('/employees/');
 });
 
+router.get('/:id', (req, res) => {
+    const employee = employeeService.getEmployeeById(req.params.id);
+    
+    if (!employee) {
+        return res.redirect('/employees');
+    }
+
+    res.render('employeeDetails', { employee });
+});
+
 module.exports = router;
