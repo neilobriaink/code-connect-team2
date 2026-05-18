@@ -16,8 +16,29 @@ class EmployeeService {
         }
     }
 
+    getEmployeeByNumber(employeeNumber) {
+        const employees = this.getEmployees();
+        return employees.find(emp => emp.employeeNumber === employeeNumber);
+    }
+
+    updateEmployee(employeeNumber, updatedData) {
+        const employees = this.getEmployees();
+        const index = employees.findIndex(emp => emp.employeeNumber === employeeNumber);
+        if (index === -1) return null;
+
+        employees[index] = {
+            employeeNumber: employeeNumber,
+            name: updatedData.name,
+            address: updatedData.address,
+            salary: parseFloat(updatedData.salary),
+            role: updatedData.role
+        };
+        fs.writeFileSync(this.filePath, JSON.stringify(employees, null, 2), 'utf8');
+        return employees[index];
+    }
+
     // Helper function to write users to JSON file
-     writeEmployees(employees) {
+    writeEmployees(employees) {
         try {
               fs.writeFileSync(this.filePath, JSON.stringify(employees, null, 2), 'utf8');
          } catch (err) {
@@ -32,9 +53,16 @@ class EmployeeService {
 
     // Get a user by ID
     getEmployeeById(id) {
-        const employees = this.getEmployees();
-        return employees.find(employee => employee.id === id);
+    try {
+        const data = fs.readFileSync(this.filePath, 'utf8');
+        const employees = JSON.parse(data);
+
+        return employees.find(employee => employee.id == id) || null;
+    } catch (error) {
+        console.error('Could not find employee: ', error);
+        return null;
     }
+}
 
     deleteEmployee(id) {
         const employees = this.getEmployees();
