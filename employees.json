@@ -22,13 +22,5 @@
     "role": "Support Specialist",
     "employeeNumber": "00003",
     "id": 3
-  },
-  {
-    "name": "Alanna Toner",
-    "address": "567 Road",
-    "salary": "20000",
-    "role": "Tester",
-    "id": 4,
-    "employeeNumber": "00004"
   }
 ]

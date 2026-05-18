@@ -36,6 +36,16 @@ class EmployeeService {
         return employees.find(employee => employee.id === id);
     }
 
+    deleteEmployee(id) {
+        const employees = this.getEmployees();
+        const index = employees.findIndex(employee => employee.id === id);
+        if (index === -1) return null;
+
+        const deleted = employees.splice(index, 1)[0];
+        this.writeEmployees(employees);
+        return deleted;
+    }
+
     // Create a new user
     createEmployee(newEmployee) {
     const employees = this.getEmployees();

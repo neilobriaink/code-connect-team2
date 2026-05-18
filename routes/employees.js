@@ -37,4 +37,11 @@ router.post('/add', validateEmployee, (req, res) => {
   res.redirect('/employees/');
 });
 
+// Delete an employee
+router.post('/delete/:id', (req, res) => {
+  const deleted = employeeService.deleteEmployee(parseInt(req.params.id));
+  if (!deleted) return res.status(404).send('Employee not found');
+  res.redirect('/employees');
+});
+
 module.exports = router;
