@@ -1,0 +1,23 @@
+[
+  {
+    "employeeNumber": 1001,
+    "name": "Alice Johnson",
+    "address": "12 Main Street, Belfast, BT1 1AA",
+    "salary": 45000,
+    "role": "Software Engineer"
+  },
+  {
+    "employeeNumber": 1002,
+    "name": "Bob Smith",
+    "address": "34 High Street, Edinburgh, EH1 1YZ",
+    "salary": 55000,
+    "role": "Senior Consultant"
+  },
+  {
+    "employeeNumber": 1003,
+    "name": "Carol White",
+    "address": "56 Park Avenue, London, SW1A 1AA",
+    "salary": 65000,
+    "role": "Project Manager"
+  }
+]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employees</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Kainos Employees</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Employee Number</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Salary</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% employees.forEach(employee => { %>
+          <tr>
+            <td><%= employee.employeeNumber %></td>
+            <td><%= employee.name %></td>
+            <td><%= employee.address %></td>
+            <td>£<%= employee.salary.toLocaleString() %></td>
+            <td><%= employee.role %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
