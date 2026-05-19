@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-  font: 14px "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font: 14px "Gill Sans", "Source Sans Pro", sans-serif;
   color: var(--kainos-dark);
   background-color: var(--kainos-light);
 }
@@ -42,7 +42,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 90px;  
 }
 
 .navbar-brand {
@@ -65,17 +65,11 @@ body {
 }
 
 .brand-logo {
-  font-size: 28px;
-  font-weight: bold;
-  background: var(--kainos-green);
-  color: var(--kainos-navy);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-family: "Arial Black", sans-serif;
+  height: 60px;  
+  width: auto;   
+  object-fit: contain;
+  display: block;
+  border-radius: 0;  
 }
 
 .brand-text {
@@ -196,7 +190,7 @@ a:hover {
 }
 
 .button:hover, input[type="submit"]:hover {
-  background: #7d3fa3;
+  background: #4B6BAC;
   transform: translateY(-2px);
 }
 
@@ -209,7 +203,8 @@ table {
   margin-top: 20px;
 }
 
-table thead {
+table thead,
+table thead th {
   background: var(--kainos-navy);
   color: var(--kainos-white);
 }
@@ -256,7 +251,7 @@ form select {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font: 14px "Open Sans", sans-serif;
+  font: 14px "Gill Sans", sans-serif;
   margin-bottom: 15px;
   transition: border-color 0.3s;
 }
@@ -272,6 +267,7 @@ form select:focus {
 h1, h2, h3 {
   color: var(--kainos-navy);
   margin-bottom: 15px;
+  font-family: "Gotham Bold", "Montserrat", sans-serif;
 }
 
 h1 {

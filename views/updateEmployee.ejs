@@ -4,25 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Employee</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23662D91' width='100' height='100'/><text x='50' y='65' font-size='70' font-weight='bold' fill='%2300B7FF' text-anchor='middle' font-family='Arial'>K</text></svg>">
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>Update Employee</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="/" class="brand-link">
+            <img src="/media/Kainos_logo_1024X512-1643380451515.webp" alt="Kainos Logo" class="brand-logo">
+          </a>
+        </div>
+      </div>
+    </nav>
 
-    <form action="/employees/update/<%= employee.employeeNumber %>" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" value="<%= employee.name %>"><br>
+    <!-- Main Content -->
+    <main>
+      <section class="hero">
+        <h1>Update Employee</h1>
+        <p>Edit employee information</p>
+      </section>
 
-        <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address" value="<%= employee.address %>"><br>
+      <form action="/employees/update/<%= employee.employeeNumber %>" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= employee.name %>">
 
-        <label for="salary">Salary:</label><br>
-        <input type="number" id="salary" name="salary" value="<%= employee.salary %>"><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="<%= employee.address %>">
 
-        <label for="role">Role:</label><br>
-        <input type="text" id="role" name="role" value="<%= employee.role %>"><br>
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" value="<%= employee.salary %>">
 
-        <input type="submit" value="Submit">
-    </form>
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" value="<%= employee.role %>">
+
+        <div class="hero-buttons">
+          <input type="submit" value="Update Employee" class="button">
+          <a href="/employees" class="button">Cancel</a>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Kainos</h3>
+            <p>Digital transformation and software engineering solutions.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>Email: <a href="mailto:info@kainos.com">info@kainos.com</a></li>
+              <li>Phone: <a href="tel:+442890490490">+44 (0)28 9049 0490</a></li>
+              <li>Address: Unit 4000, DBC, 120 Midsummer Boulevard, Milton Keynes MK9 2EA</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Kainos Software. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
