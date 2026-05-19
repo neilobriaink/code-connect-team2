@@ -62,7 +62,11 @@
                   <td><%= role.capability %></td>
                   <td><%= role.description %></td>
                   <td><a href="/roles/job-role-edit/<%= role.id %>" class="button">Edit</a></td>
-                  <td><a href="/roles/job-role-delete/<%= role.id %>" class="button">Delete</a></td>
+                  <td>
+                    <form action="/roles/delete/<%= role.id %>" method="post">
+                      <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete the <%= role.name %> role? Any employees assigned to this role will be set to Unassigned.')">
+                    </form>
+                  </td>
                 </tr>
               <% }) %>
             </tbody>

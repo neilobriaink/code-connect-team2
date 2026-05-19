@@ -33,13 +33,5 @@
     "level": "Manager",
     "capability": "Delivery",
     "description": "Coordinates teams, timelines and delivery plans to help projects meet their goals."
-  },
-  {
-    "id": 6,
-    "name": "Product Consultant",
-    "level": "Professional",
-    "capability": "Product",
-    "description": "Works with stakeholders to understand requirements and help shape digital products."
   }
-
 ]

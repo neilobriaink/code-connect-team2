@@ -5,7 +5,7 @@
     "name": "Alice Johnson",
     "address": "12 Main Street, Belfast, BT1 1AA",
     "salary": 4500000000000,
-    "role": "Product Consultant"
+    "role": "Unassigned"
   },
   {
     "name": "Jordan Patel",
@@ -24,11 +24,11 @@
     "id": 3
   },
   {
+    "id": 4,
+    "employeeNumber": "00004",
     "name": "David",
     "address": "123 Street",
-    "salary": "220089",
-    "role": "Data Analyst",
-    "id": 4,
-    "employeeNumber": "00004"
+    "salary": 220089,
+    "role": "Data Engineer"
   }
 ]

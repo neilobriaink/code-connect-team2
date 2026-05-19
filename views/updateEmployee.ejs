@@ -48,6 +48,7 @@
         <label for="role">Role:</label><br>
         <select id="role" name="role" required>
           <option value="">-- Select a role --</option>
+          <option value="Unassigned" <%= employee.role === 'Unassigned' ? 'selected' : '' %>>Unassigned</option>
           <% jobRoles.forEach(jobRole => { %>
             <option value="<%= jobRole.name %>" <%= employee.role === jobRole.name ? 'selected' : '' %>><%= jobRole.name %></option>
           <% }) %>
