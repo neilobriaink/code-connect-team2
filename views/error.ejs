@@ -21,6 +21,11 @@
           <li><a href="/users">Users</a></li>
           <li><a href="/roles">Job Roles</a></li>
         </ul>
+        <% if (user) { %>
+          <form action="/users/logout" method="post" style="margin-left:16px; display:inline-block;">
+            <button type="submit" class="button">Logout</button>
+          </form>
+        <% } %>
       </div>
     </nav>
     <main>

@@ -49,6 +49,12 @@ router.post("/login", async (req, res) => {
         errors: ["Invalid Email or Password!"],
       });
     }
+      req.session.user = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role
+    };
 
     return res.redirect("/dashboard");
 
@@ -56,6 +62,19 @@ router.post("/login", async (req, res) => {
     return res.render("login", {
       errors: [error.message],
     });
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session) {
+    req.session.destroy(err => {
+      if (err) {
+        console.error('Session destroy error:', err);
+      }
+      res.redirect('/');
+    });
+  } else {
+    res.redirect('/');
   }
 });
 

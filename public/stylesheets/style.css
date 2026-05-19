@@ -247,6 +247,15 @@ form {
   max-width: 500px;
 }
 
+.navbar form {
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  max-width: none;
+  display: inline-block;
+}
+
 table form {
   background: none;
   padding: 0;

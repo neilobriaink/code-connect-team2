@@ -16,11 +16,33 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+const session = require("express-session");
+
+app.use(session({
+  secret: "super-secret-key",
+  resave: false,
+  saveUninitialized: false
+}));
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use((req, res, next) => {
+  res.locals.user = req.session ? req.session.user : null;
+  next();
+});
+
+// function requireLogin(req, res, next) {
+//   if (!req.session || !req.session.user) {
+//     return res.redirect('/');
+//   }
+//   next();
+// }
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
