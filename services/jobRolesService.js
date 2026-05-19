@@ -24,6 +24,16 @@ class JobRolesService {
         fs.writeFileSync(this.filePath, JSON.stringify(roles, null, 2));
         return newRole;
     }
+    
+    deleteJobRole(id) {
+        const roles = this.getJobRoles();
+        const index = roles.findIndex(role => role.id === id);
+        if (index === -1) return null;
+
+        const deleted = roles.splice(index, 1)[0];
+        fs.writeFileSync(this.filePath, JSON.stringify(roles, null, 2), 'utf8');
+        return deleted;
+    }
 }
 
 module.exports = JobRolesService;

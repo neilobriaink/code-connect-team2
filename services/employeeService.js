@@ -60,6 +60,17 @@ class EmployeeService {
     }
 }
 
+    unassignRole(roleName) {
+        const employees = this.getEmployees();
+        const updated = employees.map(emp => {
+            if (emp.role === roleName) {
+                return { ...emp, role: 'Unassigned' };
+            }
+            return emp;
+        });
+        this.writeEmployees(updated);
+    }
+
     deleteEmployee(id) {
         const employees = this.getEmployees();
         const index = employees.findIndex(employee => employee.id === id);
