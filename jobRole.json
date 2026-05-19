@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Trainee Software Engineer",
+    "level": "Trainee",
+    "capability": "Software Engineering",
+    "description": "Supports the development, testing and maintenance of software applications while building core engineering skills."
+  },
+  {
+    "id": 2,
+    "name": "Lead Software Engineer",
+    "level": "Lead",
+    "capability": "Software Engineering",
+    "description": "Provides technical leadership across a team and guides the delivery of software solutions."
+  },
+  {
+    "id": 3,
+    "name": "Test Engineer",
+    "level": "Professional",
+    "capability": "Testing and Assurance",
+    "description": "Creates and runs tests to ensure software meets quality, performance and reliability standards."
+  },
+  {
+    "id": 4,
+    "name": "Data Engineer",
+    "level": "Professional",
+    "capability": "Data and AI",
+    "description": "Builds and maintains data pipelines, databases and data solutions to support business needs."
+  },
+  {
+    "id": 5,
+    "name": "Delivery Manager",
+    "level": "Manager",
+    "capability": "Delivery",
+    "description": "Coordinates teams, timelines and delivery plans to help projects meet their goals."
+  },
+  {
+    "id": 6,
+    "name": "Product Consultant",
+    "level": "Professional",
+    "capability": "Product",
+    "description": "Works with stakeholders to understand requirements and help shape digital products."
+  }
+
+]
