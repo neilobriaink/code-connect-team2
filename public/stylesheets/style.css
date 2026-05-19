@@ -1,7 +1,7 @@
 /* Kainos Branding Colors */
 :root {
-  --kainos-purple: #662D91;
-  --kainos-blue: #00B7FF;
+  --kainos-navy: #1B2A4A;
+  --kainos-green: #6DC02E;
   --kainos-dark: #333333;
   --kainos-light: #F5F5F5;
   --kainos-white: #FFFFFF;
@@ -27,7 +27,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background: linear-gradient(135deg, var(--kainos-purple) 0%, #7d3fa3 100%);
+  background: linear-gradient(135deg, var(--kainos-navy) 0%, #4B6BAC 100%);
   padding: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -67,8 +67,8 @@ body {
 .brand-logo {
   font-size: 28px;
   font-weight: bold;
-  background: var(--kainos-blue);
-  color: var(--kainos-purple);
+  background: var(--kainos-green);
+  color: var(--kainos-navy);
   width: 40px;
   height: 40px;
   display: flex;
@@ -99,8 +99,8 @@ body {
 }
 
 .navbar-menu a:hover {
-  color: var(--kainos-blue);
-  border-bottom-color: var(--kainos-blue);
+  color: var(--kainos-green);
+  border-bottom-color: var(--kainos-green);
 }
 
 /* Main Content */
@@ -114,7 +114,7 @@ main {
 
 /* Footer Styling */
 .footer {
-  background: var(--kainos-purple);
+  background: var(--kainos-navy);
   color: var(--kainos-white);
   margin-top: auto;
 }
@@ -135,7 +135,7 @@ main {
 .footer-section h3 {
   font-size: 16px;
   margin-bottom: 15px;
-  color: var(--kainos-blue);
+  color: var(--kainos-green);
 }
 
 .footer-section p {
@@ -153,7 +153,7 @@ main {
 }
 
 .footer-section a {
-  color: var(--kainos-blue);
+  color: var(--kainos-green);
   text-decoration: none;
   transition: opacity 0.3s;
 }
@@ -172,17 +172,17 @@ main {
 
 /* Link Styling */
 a {
-  color: var(--kainos-blue);
+  color: var(--kainos-green);
   transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--kainos-purple);
+  color: var(--kainos-navy);
 }
 
 /* Button Styling */
 .button, input[type="submit"] {
-  background: var(--kainos-purple);
+  background: var(--kainos-navy);
   color: var(--kainos-white);
   border: none;
   padding: 12px 24px;
@@ -210,7 +210,7 @@ table {
 }
 
 table thead {
-  background: var(--kainos-purple);
+  background: var(--kainos-navy);
   color: var(--kainos-white);
 }
 
@@ -265,12 +265,12 @@ form input:focus,
 form textarea:focus,
 form select:focus {
   outline: none;
-  border-color: var(--kainos-purple);
+  border-color: var(--kainos-navy);
   box-shadow: 0 0 0 3px rgba(102, 45, 145, 0.1);
 }
 
 h1, h2, h3 {
-  color: var(--kainos-purple);
+  color: var(--kainos-navy);
   margin-bottom: 15px;
 }
 
@@ -338,7 +338,7 @@ h3 {
 
 .feature-card {
   background: var(--kainos-white);
-  border-left: 4px solid var(--kainos-blue);
+  border-left: 4px solid var(--kainos-green);
   padding: 25px;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -352,7 +352,7 @@ h3 {
 
 .feature-card h3 {
   margin-top: 0;
-  color: var(--kainos-purple);
+  color: var(--kainos-navy);
 }
 
 .feature-card p {
