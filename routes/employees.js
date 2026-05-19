@@ -20,7 +20,11 @@ router.get('/dashboard', (req, res, next) => {
 // Create a new employee form
 router.get('/add', (req, res) => {
   const jobRoles = jobRolesService.getJobRoles();
-  res.render('addEmployee', { jobRoles });
+  
+  res.render("addEmployee", {
+    jobRoles,
+    formData: {}
+  });
 });
 
 // Update an employee by id form
