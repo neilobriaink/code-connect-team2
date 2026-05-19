@@ -4,7 +4,11 @@ var router = express.Router();
 const JobRolesService = require('../services/jobRolesService');
 const rolesService = new JobRolesService();
 
+const EmployeeService = require('../services/employeeService');
+const employeeService = new EmployeeService();
+
 router.get('/', (req, res) => {
+    res.set('Cache-Control', 'no-store');
     const roles = rolesService.getJobRoles();
     res.render('jobRolesList', { roles });
 });
