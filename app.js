@@ -36,18 +36,26 @@ app.use((req, res, next) => {
   next();
 });
 
-// function requireLogin(req, res, next) {
-//   if (!req.session || !req.session.user) {
-//     return res.redirect('/');
-//   }
-//   next();
-// }
+function requireLogin(req, res, next) {
+  if (!req.session || !req.session.user) {
+    return res.redirect('/');
+  }
+  next();
+}
 
-
-app.use('/', indexRouter);
+// PUBLIC ROUTES (no login required)
 app.use('/users', usersRouter);
-app.use('/employees', employeesRouter);
-app.use('/roles', rolesRouter)
+
+// Public landing page
+app.use('/', indexRouter);
+
+// PROTECTED ROUTES (login required)
+app.use('/users', requireLogin, usersRouter);
+app.use('/employees', requireLogin, employeesRouter);
+app.use('/roles', requireLogin, rolesRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

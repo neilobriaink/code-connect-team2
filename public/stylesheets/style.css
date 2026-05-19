@@ -175,6 +175,8 @@ a:hover {
 }
 
 /* Button Styling */
+
+
 .button, input[type="submit"] {
   background: var(--kainos-navy);
   color: var(--kainos-white);
