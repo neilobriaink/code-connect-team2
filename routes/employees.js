@@ -14,16 +14,16 @@ router.get('/add', (req, res) => {
   res.render('addEmployee')
 });
 
-// Update an employee by employee number form
-router.get('/update/:employeeNumber', (req, res) => {
-    const employee = employeeService.getEmployeeByNumber(parseInt(req.params.employeeNumber));
+// Update an employee by id form
+router.get('/update/:id', (req, res) => {
+    const employee = employeeService.getEmployeeById(parseInt(req.params.id));
     if (!employee) return res.status(404).send('Employee not found');
     res.render('updateEmployee', { employee });
 });
- 
-// Update an employee by employee number
-router.post('/update/:employeeNumber', (req, res) => {
-    const updatedEmployee = employeeService.updateEmployee(parseInt(req.params.employeeNumber), req.body);
+
+// Update an employee by id
+router.post('/update/:id', (req, res) => {
+    const updatedEmployee = employeeService.updateEmployee(parseInt(req.params.id), req.body);
     if (!updatedEmployee) return res.status(404).send('Employee not found');
     res.redirect('/employees');
 });

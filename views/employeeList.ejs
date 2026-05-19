@@ -30,8 +30,8 @@
                 <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete <%= employee.name %>?')">
               </form>
             </td>
-            <td><a href="/employees/update/<%= employee.employeeNumber %>">Edit</a></td>
-            <td><a href="/employees/<%= employee.employeeNumber %>">View</a></td>
+            <td><a href="/employees/update/<%= employee.id %>">Edit</a></td>
+            <td><a href="/employees/<%= employee.id %>">View</a></td>
           </tr>
         <% }) %>
       </tbody>

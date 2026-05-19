@@ -16,24 +16,20 @@ class EmployeeService {
         }
     }
 
-    getEmployeeByNumber(employeeNumber) {
+    updateEmployee(id, updatedData) {
         const employees = this.getEmployees();
-        return employees.find(emp => emp.employeeNumber === employeeNumber);
-    }
-
-    updateEmployee(employeeNumber, updatedData) {
-        const employees = this.getEmployees();
-        const index = employees.findIndex(emp => emp.employeeNumber === employeeNumber);
+        const index = employees.findIndex(emp => emp.id === id);
         if (index === -1) return null;
 
         employees[index] = {
-            employeeNumber: employeeNumber,
+            id: id,
+            employeeNumber: employees[index].employeeNumber,
             name: updatedData.name,
             address: updatedData.address,
             salary: parseFloat(updatedData.salary),
             role: updatedData.role
         };
-        fs.writeFileSync(this.filePath, JSON.stringify(employees, null, 2), 'utf8');
+        this.writeEmployees(employees);
         return employees[index];
     }
 
