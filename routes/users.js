@@ -50,7 +50,7 @@ router.post("/login", async (req, res) => {
       });
     }
 
-    return res.redirect("/employees");
+    return res.redirect("/dashboard");
 
   } catch (error) {
     return res.render("login", {

@@ -22,5 +22,13 @@
     "role": "Support Specialist",
     "employeeNumber": "00003",
     "id": 3
+  },
+  {
+    "name": "David",
+    "address": "123 Street",
+    "salary": "220089",
+    "role": "Data Analyst",
+    "id": 4,
+    "employeeNumber": "00004"
   }
 ]

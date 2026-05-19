@@ -194,6 +194,20 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.create-employee-btn {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
 /* Table Styling */
 table {
   width: 100%;

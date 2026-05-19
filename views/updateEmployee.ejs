@@ -12,15 +12,15 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="navbar-brand">
-          <a href="/" class="brand-link">
+          <a href="/dashboard" class="brand-link">
             <img src="/media/Kainos_logo_1024X512-1643380451515.webp" alt="Kainos Logo" class="brand-logo">
           </a>
         </div>
         <ul class="navbar-menu">
-          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Home</a></li>
           <li><a href="/employees">Employees</a></li>
           <li><a href="/users">Users</a></li>
-          <li><a href="/roles/job-roles">Job Roles</a></li>
+          <li><a href="/roles">Job Roles</a></li>
         </ul>
       </div>
     </nav>
@@ -31,10 +31,9 @@
         <h1>Update Employee</h1>
         <p>Edit employee information</p>
       </section>
-
-      <form action="/employees/update/<%= employee.employeeNumber %>" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<%= employee.name %>">
+    <form action="/employees/update/<%= employee.id %>" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="<%= employee.name %>"><br>
 
         <label for="address">Address:</label>
         <input type="text" id="address" name="address" value="<%= employee.address %>">
