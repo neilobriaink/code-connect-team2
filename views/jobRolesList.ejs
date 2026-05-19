@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Kainos Job Roles:</h1>
+
+<% if(!roles || roles.length === 0){ %>
+      <div>
+        <h3>No Job Roles Available</h3>
+      </div>
+    <%} else { %>
+        <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Level</th>
+          <th>Capability</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% roles.forEach(role => { %>
+          <tr>
+            <td><%= role.name %></td>
+            <td><%= role.level %></td>
+            <td><%= role.capability %></td>
+            <td><%= role.description %></td>
+            <td><a href="/roles/job-role-edit/<%= role.id %>">Edit</a></td>
+            <td><a href="/roles/job-role-delete<%= role.id %>">Delete</a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %>
+    
+
+      <form action="/roles/job-role" method="get">
+        <input type="submit" value="Create new Job Role">
+    </form> 
+  </body>
+</html>
