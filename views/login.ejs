@@ -1,4 +1,8 @@
 </head>
+<%
+  const successMessage = typeof success !== "undefined" ? success : null;
+  const errorList = typeof errors !== "undefined" ? errors : [];
+%>
 <body>
     <div>
         <h1>Login</h1>
@@ -20,14 +24,20 @@
         <a href="/users/create-account">Create Account</a>
     </form> 
 
-    <% if (errors && errors.length > 0) { %>
+    <% if (errorList && errorList.length > 0) { %>
+            <div>
+                <div class="error-message">
+                <% errorList.forEach(error => { %>
+                    <h3><%= error %></h3>
+                <% }) %>
+                </div>
             </div>
-        </div>
-    <% } %>
-    <% if (success && success.length > 0) { %>
+        <% } %>
+
+    <% if (successMessage) { %>
         <div>
             <div class="success-message">
-                <h3><%= success %></h3>
+                <h3><%= successMessage %></h3>
             </div>
         </div>
     <% } %>

@@ -15,7 +15,7 @@ router.get("/login", (req, res) => {
   res.render(
     'login', 
     { errors: [],
-      success: req.query.success
+      success: req.query.success || null
      },
   );
 })
@@ -45,6 +45,7 @@ router.post("/login", async (req, res) => {
     if (!user) {
       return res.render("login", {
         errors: ["Invalid Email or Password!"],
+        success: req.query.success || null
       });
     }
 
